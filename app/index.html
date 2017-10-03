@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="" ng-app="YoutubeLib">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Youtube library</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+    </head>
+    <body ng-controller="YoutubeLibRootController as youtubeLibRootCtrl">
+        <!--[if IE]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a>
+            to improve your experience.
+        </p><![endif]-->
+
+
+        <header class="site-header">
+            <div class="logo">
+                <a ui-sref="home">Youtube library</a>
+            </div>
+            <div class="menu menu-main">
+                <a class="menu-main-link" ui-sref-active="active" ui-sref="albums-list">Albums</a>
+            </div>
+        </header>
+
+
+        <div ui-view class="page-wrapper"></div>
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/lodash/lodash.js"></script>
+        <script src="/bower_components/moment/moment.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/bower_components/angular-moment/angular-moment.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/youtubeLib.module.js"></script>
+        <script src="scripts/youtubeLib.constants.js"></script>
+        <script src="scripts/youtubeLib.config.js"></script>
+        <script src="scripts/youtubeLib.routes.js"></script>
+        <script src="scripts/youtubeLib.run.js"></script>
+        <script src="scripts/services/api-url.interceptor.service.js"></script>
+        <script src="scripts/services/albums.service.js"></script>
+        <script src="scripts/controllers/root.js"></script>
+        <script src="scripts/controllers/albums-list.js"></script>
+        <script src="scripts/controllers/album.js"></script>
+        <script src="scripts/directives/album-list-item.js"></script>
+        <script src="scripts/directives/album-videos-item.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

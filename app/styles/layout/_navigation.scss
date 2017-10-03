@@ -1,0 +1,48 @@
+.menu {
+    color: $nav-font-color;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+
+    &-main {
+        margin-left: 150px;
+    }
+
+    &-main-link {
+        position: relative;
+        display: inline-block;
+
+        &,
+        &:focus,
+        &:active,
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &:hover,
+        &.active {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(100% + 4px);
+            height: 2px;
+            left: 0;
+            right: 0;
+            background-color: $nav-font-color;
+            pointer-events: none;
+            cursor: default;
+            opacity: 0;
+            transition: opacity .15s linear;
+        }
+
+        & + & {
+            margin-left: 40px;
+        }
+    }
+}

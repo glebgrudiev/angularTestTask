@@ -1,0 +1,196 @@
+input {
+    box-shadow: none;
+    background-image: none;
+}
+
+select {
+    &.form-control {
+        padding-left: calc(1em - 3px);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+textarea {
+    &.form-control {
+        height: auto;
+    }
+
+    &.no-resize {
+        resize: none;
+    }
+}
+
+.search-field-container {
+    position: relative;
+}
+
+.form-control {
+    font-family: inherit;
+    border: 1px solid $form-normal;
+    color: $form-font-color;
+    background-color: #fff;
+    background-image: none;
+    font-size: inherit;
+    display: block;
+    width: 100%;
+    height: 2.1em;
+    padding: .5em 1em;
+    border-radius: 4px;
+    transition: border-color ease-in-out .15s;
+
+    &:focus {
+        border-color: $form-primary;
+        box-shadow: none;
+        outline: 0;
+    }
+    &:-ms-input-placeholder {
+        color: $form-placeholder-font-color;
+    }
+    &::-moz-placeholder {
+        color: $form-placeholder-font-color;
+    }
+    &::-webkit-input-placeholder {
+        color: $form-placeholder-font-color;
+    }
+
+    &[type="search"] {
+        border-radius: 2.1em;
+        padding-left: 2.3em;
+
+        + .search-icon {
+            position: absolute;
+            top: 0;
+            bottom: 1px;
+            color: $form-placeholder-font-color;
+            font-size: 1.4em;
+            left: .5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+    }
+
+    &.disabled,
+    &[disabled] {
+        border-color: $form-disabled-color;
+        background-color: $form-disabled-color;
+    }
+
+    &-lg {
+        font-size: 20px;
+    }
+
+    &[readonly] {
+        border-color: $form-disabled-color;
+        background-color: lighten($form-disabled-color, 5%);
+    }
+}
+
+.has-success {
+    & .help-block,
+    & .control-label,
+    & .radio,
+    & .checkbox,
+    & .radio-inline,
+    & .checkbox-inline {
+        color: $message-success;
+    }
+    & .form-control {
+        border-color: $message-success;
+    }
+    & .form-control:focus {
+        border-color: $message-success;
+    }
+    & .input-group-addon {
+        background-color: $message-success;
+        border-color: $message-success;
+    }
+    & .form-control-feedback {
+        color: $message-success;
+    }
+}
+
+.has-warning {
+    & .help-block,
+    & .control-label,
+    & .radio,
+    & .checkbox,
+    & .radio-inline,
+    & .checkbox-inline {
+        color: $message-warning;
+    }
+    & .form-control {
+        border-color: $message-warning;
+    }
+    & .form-control:focus {
+        border-color: $message-warning;
+    }
+    & .input-group-addon {
+        background-color: $message-warning;
+        border-color: $message-warning;
+    }
+    & .form-control-feedback {
+        color: $message-warning;
+    }
+}
+
+.has-error {
+    & .help-block,
+    & .control-label,
+    & .radio,
+    & .checkbox,
+    & .radio-inline,
+    & .checkbox-inline {
+        color: $message-danger;
+    }
+    & .form-control {
+        border-color: $message-danger;
+    }
+    & .form-control:focus {
+        border-color: $message-danger;
+    }
+    & .input-group-addon {
+        background-color: $message-danger;
+        border-color: $message-danger;
+    }
+    & .form-control-feedback {
+        color: $message-danger;
+    }
+}
+
+.has-feedback {
+    position: relative;
+
+    .form-control {
+        padding-right: 1.7em;
+    }
+}
+
+.form-control-feedback {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 1em;
+    height: 1em;
+    right: .5em;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+}
+
+.input-row {
+    @include all-but(1) {
+        margin-top: $input-row-margin;
+    }
+}
+
+.input-row-lg {
+    @include all-but(1) {
+        margin-top: ($input-row-margin * 2);
+    }
+
+    font-size: 20px;
+}

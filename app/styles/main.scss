@@ -1,0 +1,31 @@
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+@import 'utils/helpers';
+
+// bower:scss
+@import "bower_components/normalize-scss/sass/normalize/_import-now.scss";
+@import "bower_components/family.scss/source/src/_family.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+//@import 'vendors/';
+
+@import 'base/typography';
+@import 'base/base';
+
+@import 'layout/forms';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/tables';
+
+@import 'components/buttons';
+@import 'components/panels';
+@import 'components/navbar';
+@import 'components/custom-checkbox';
+@import 'components/custom-radio';
+@import 'components/toggle-btn';
+
+@import 'pages/albums-list';
+@import 'pages/album';

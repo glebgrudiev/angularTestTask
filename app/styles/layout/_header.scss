@@ -1,0 +1,31 @@
+.site-header {
+    background-color: $site-header-bg;
+    height: $site-header-height;
+    padding: 20px 60px;
+    box-shadow: 0 2px 2px rgba($site-header-bg, .3);
+    display: flex;
+    align-items: center;
+
+    + .page-wrapper {
+        min-height: calc(100% - #{$site-header-height});
+        height: auto;
+
+        &.job-specified-state,
+        &.jobs-state {
+            padding-top: 30px;
+            height: calc(100% - #{$site-header-height});
+            min-height: initial;
+        }
+    }
+}
+
+.logo {
+    color: #333;
+    font-weight: 600;
+    font-size: 30px;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}

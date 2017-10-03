@@ -1,0 +1,16 @@
+.panel {
+    background-color: $panel-bg-color;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    margin-bottom: 20px;
+
+    &-heading {
+        background-color: $panel-head-bg-color;
+        border-radius: 4px 4px 0 0;
+        padding: 10px 15px;
+    }
+
+    &-body {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,66 @@
+.navbar {
+    position: relative;
+    height: $navbar-height;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    width: 100%;
+    overflow: hidden;
+
+    .navbar-link {
+        height: 100%;
+        padding: 0 10px;
+        cursor: pointer;
+
+        + .navbar-link {
+            margin-left: .5em;
+        }
+
+        &.disabled {
+            color: lighten($navbar-font-color, 25%);
+            cursor: default;
+            opacity: .7;
+        }
+    }
+
+    .navbar-zoom-level {
+        margin-left: 20px;
+        height: 100%;
+    }
+
+    .navbar-search {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+}
+
+.navbar-default {
+    & {
+        background-color: $navbar-background-color;
+        border-color: darken($navbar-background-color, 5%);
+    }
+    & .navbar-link,
+    & .navbar-zoom-level {
+        color: $navbar-font-color;
+    }
+    & .navbar-link:hover,
+    & .navbar-link:focus,
+    & .navbar-link.active {
+        color: lighten($navbar-font-color, 25%);
+    }
+}
+
+.navbar-inverse {
+    & {
+        background-color: lighten($navbar-inverse-background-color, 20%);
+        border-color: lighten($navbar-inverse-background-color, 20%);
+    }
+    & .navbar-link,
+    & .navbar-zoom-level {
+        color: lighten($navbar-inverse-background-color, 55%);
+    }
+    & .navbar-link.active,
+    & .navbar-link:hover,
+    & .navbar-link:focus {
+        color: lighten($navbar-font-color, 40%);
+    }
+}

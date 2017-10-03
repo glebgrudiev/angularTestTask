@@ -1,0 +1,37 @@
+.text-center {
+    text-align: center;
+
+    .toggle-btn {
+        margin: 0 auto;
+    }
+}
+
+.text-success {
+    color: $grass-dark;
+}
+
+.text-warning {
+    color: $sunflower-dark;
+}
+
+.text-danger {
+    color: $bittersweet-dark;
+}
+
+.text-info {
+    color: $bluejeans-light;
+}
+
+.grid {
+    &.nowrap {
+        flex-wrap: nowrap;
+    }
+}
+
+.debug-color {
+    @include debug-color;
+}
+
+.noselect {
+    user-select: none;
+}
